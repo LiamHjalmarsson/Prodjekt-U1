@@ -31,11 +31,13 @@ function gridMaker(gridContainer, R, C){
     let gridcontainer = document.querySelector(gridContainer);
     let div = document.createElement("div");
     div.style.display = "grid"
-    div.style.height = "100vh";
+    div.style.height = "100vh"
     div.style.backgroundColor = "lightGray";
+    div.style.gridTemplateRows = R;
+    div.style.gridAutoColumns = C;
 
     gridcontainer.appendChild(div);
 }
 
-gridMaker("#grid", "", "")
+gridMaker("#grid", "2", "6")
 console.log(gridMaker);
