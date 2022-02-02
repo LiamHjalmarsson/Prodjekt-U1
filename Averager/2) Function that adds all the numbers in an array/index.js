@@ -47,7 +47,7 @@ The function only needs to work when all the elements are numbers.
 TEST
 adder([5, 2, 1, 7]) should return 15
 adder([1]) should return 1
-adder should return 0
+adder ([0]) should return 0
 
 
 VIDEO:  Make a video where you explain how adder works line by line. Max 3 minutes.
@@ -64,5 +64,5 @@ function adder (_Arr){
   return Sum;
 }
 
-console.log(adder([1]));
+console.log(adder([5, 2, 1, 7]));
 
