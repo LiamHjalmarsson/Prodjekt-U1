@@ -28,16 +28,19 @@ The HTML-element #grid will however be empty since we have not appended any othe
 */
 
 function gridMaker(gridContainer, R, C){
+    for ( let i = 0; i < 25; i++){
     let gridcontainer = document.querySelector(gridContainer);
     let div = document.createElement("div");
     div.style.display = "grid"
-    div.style.height = "100vh"
+    div.style.height = "20px"
     div.style.backgroundColor = "lightGray";
     div.style.gridTemplateRows = R;
     div.style.gridAutoColumns = C;
+    div.style.border = "2px solid black";
 
     gridcontainer.appendChild(div);
 }
+}
 
-gridMaker("#grid", "2", "6")
+gridMaker("#grid", "4", "10")
 console.log(gridMaker);
