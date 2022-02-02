@@ -27,3 +27,11 @@ The HTML-element #grid will however be empty since we have not appended any othe
 
 */
 
+function gridMaker(gridContainer, R, C){
+    let gridcontainer = document.querySelector(gridContainer);
+    let div = document.createElement("div");
+    div.innerHTML = "hej";
+
+}
+
+console.log(gridMaker);
