@@ -30,8 +30,12 @@ The HTML-element #grid will however be empty since we have not appended any othe
 function gridMaker(gridContainer, R, C){
     let gridcontainer = document.querySelector(gridContainer);
     let div = document.createElement("div");
-    div.innerHTML = "hej";
+    div.style.display = "grid"
+    div.style.height = "100vh";
+    div.style.backgroundColor = "lightGray";
 
+    gridcontainer.appendChild(div);
 }
 
+gridMaker("#grid", "", "")
 console.log(gridMaker);
