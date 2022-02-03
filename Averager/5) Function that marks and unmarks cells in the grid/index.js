@@ -20,7 +20,9 @@ Add CSS-rules for .selected to the CSS-file. A change of
 background-color and color is enough but feel free!
 
 */
-
+function selected (){
+     let 
+}
 
 /*
 
