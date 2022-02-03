@@ -20,9 +20,7 @@ Add CSS-rules for .selected to the CSS-file. A change of
 background-color and color is enough but feel free!
 
 */
-function selected (){
-     let 
-}
+
 
 /*
 
@@ -53,4 +51,18 @@ the classList.
 
 */
 
+function createNumberDiv() {
+    let div = document.createElement("div");
+    div.innerHTML = Math.floor(Math.random () * 99);
+    div.addEventListener("click", function (){
+        div.classList.toggle("seleced")
+    })
+
+    console.log(div);
+    return div;
+}
+
+console.log(createNumberDiv);
+
+document.querySelector("body").appendChild(createNumberDiv() );
 
