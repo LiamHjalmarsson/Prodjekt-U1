@@ -13,7 +13,6 @@ function testConsole (p1) {
   document.querySelector("body").style.backgroundColor = p1;
 }
 
-
 /*
 
 Exercise

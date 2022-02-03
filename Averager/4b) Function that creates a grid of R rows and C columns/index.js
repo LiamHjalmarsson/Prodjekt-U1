@@ -25,22 +25,15 @@ with id "grid" having 4 rows and 1 columns
 The HTML-element #grid will however be empty since we have not appended any other elements to it.
 
 
+
 */
 
-function gridMaker(gridContainer, R, C){
-    for ( let i = 0; i < 25; i++){
-    let gridcontainer = document.querySelector(gridContainer);
-    let div = document.createElement("div");
-    div.style.display = "grid"
-    div.style.height = "20px"
-    div.style.backgroundColor = "lightGray";
-    div.style.gridTemplateRows = R;
-    div.style.gridAutoColumns = C;
-    div.style.border = "2px solid black";
 
-    gridcontainer.appendChild(div);
-}
+function gridMaker(gridContainer, R, C) {
+
+    gridContainer.style.gridTemplateColumns = `repeat(${C}, 1fr)`;
+    gridContainer.style.gridTemplateRows = `repeat(${R}, 1fr)`;
+
 }
 
-gridMaker("#grid", "4", "10")
-console.log(gridMaker);
+gridMaker( document.querySelector("#grid"), 4, 1 );

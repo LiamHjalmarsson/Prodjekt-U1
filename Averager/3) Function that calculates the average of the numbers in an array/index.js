@@ -59,7 +59,7 @@ console.log(adder([5, 2, 1, 7]));
 function averg ( _array ) {
   let sum = 0;
   for (let i = 0; i < _array.length; i++){
-   sum = sum + _array[i];
+   sum = sum + _array[i]; // / _array.length; 
 }
 return sum/_array.length;
 
