@@ -54,6 +54,7 @@ the classList.
 function createNumberDiv() {
     let div = document.createElement("div");
     div.innerHTML = Math.floor(Math.random () * 99);
+    
     div.addEventListener("click", function (){
         div.classList.toggle("seleced")
     })
@@ -65,4 +66,3 @@ function createNumberDiv() {
 console.log(createNumberDiv);
 
 document.querySelector("body").appendChild(createNumberDiv() );
-

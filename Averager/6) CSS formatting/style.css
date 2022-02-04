@@ -1,3 +1,8 @@
+* {
+  font: 20px "Times New Roman", Times, serif;
+  color: white;
+}
+
 body {
     margin: 0px;
     height: 100vh;
@@ -13,15 +18,30 @@ body {
     justify-content: center;
   }
   
-#inputRows {
-    margin: 0px 20px 0px 0px;
-    padding: 4px;
+#inputRows, #inputcools {
+    margin: 0px 30px 0px 5px;
+    padding: 2px;
+    background-color: transparent;
+    border: 5px solid #272727;
   }
 
-  label{ 
-    font-size: 20px;
-  }
-  
+.buttoncode{
+  background-color: transparent;
+  font-weight: bold;
+  color: white;
+  border: 5px solid #272727;
+  padding: 2px;
+}
+
+#results{
+  width: 100vw;
+  justify-content: center;
+}
+
+#results > div{
+  margin: 0px 70px 0px 30px;
+}
+
 #grid {
     margin: 2vh;
     padding: 1vh;
@@ -39,12 +59,14 @@ body {
     justify-content: center;
     align-items: center;
   
-    background-color: grey;
+    background: linear-gradient(to left, #393a3d, #2f2b2c, #5f5d5c );
   }
   
 #grid > div.selected {
-    background-color: aqua;
-    color: navy;
+    background: linear-gradient(to left, #839ff3, #23b0e7, #57a9cf );
+    color:  #272727;
+    font-size: 30px;
+    border: 5px solid #272727 ;
   }
   
 #grid > div:hover {

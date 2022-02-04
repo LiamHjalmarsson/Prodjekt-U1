@@ -45,6 +45,7 @@ VIDEO:  Record a video where you explain how averg works line by line. Max 3 min
 */
 
 // Copy your earlier function here
+
 function adder (_Arr){
   let Sum = 0; 
   for (let i = 0; i < _Arr.length; i++){
@@ -53,18 +54,16 @@ function adder (_Arr){
   return Sum;
 }
 
-console.log(adder([5, 2, 1, 7]));
 
+function averg(_array) {
+  let average = adder(_array) / _array.length;
 
-function averg ( _array ) {
-  let sum = 0;
-  for (let i = 0; i < _array.length; i++){
-   sum = sum + _array[i]; // / _array.length; 
-}
-return sum/_array.length;
-
+  return average
 }
 
 console.log(averg([1, 2, 3, 4, 5]));
+console.log(averg([2, 4]));
+console.log(averg([-1, 1]));
+
 
 

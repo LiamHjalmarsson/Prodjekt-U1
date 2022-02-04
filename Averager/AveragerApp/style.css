@@ -1,22 +1,49 @@
+* {
+  font: 20px "Times New Roman", Times, serif;
+  color: white;
+}
+
 body {
     margin: 0px;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background: linear-gradient(to left, #2a2f57, #a5344b, #b14322 );
   }
   
-  #top > div {
+#top > div {
     display: flex;
-    flex-basis: 6vh;
+    flex-basis: 4vh;
     margin: 2vh;
     justify-content: center;
   }
   
-  #top > div > div {
-    margin: 0px 2vh;
+#inputRows, #inputCols {
+    margin: 0px 30px 0px 5px;
+    padding: 2px;
+    background-color: transparent;
+    border: 5px solid #272727;
   }
-  
-  #grid {
+
+.buttoncode{
+  background-color: transparent;
+  font-weight: bold;
+  color: white;
+  border: 5px solid #272727;
+  padding: 2px;
+  cursor: pointer;
+}
+
+#results{
+  width: 100vw;
+  justify-content: center;
+}
+
+#results > div{
+  margin: 0px 70px 0px 30px;
+}
+
+#grid {
     margin: 2vh;
     padding: 1vh;
     flex-grow: 1;
@@ -24,29 +51,26 @@ body {
     gap: 1vh;
   
     font-size: 3vh;
+    border: 10px solid #272727;
+    box-shadow: 2px 2px 10px 5px #524e4e;
+}
   
-    border: 1px solid grey;
-  }
-  
-  #grid > div {
+#grid > div {
     display: flex;
     justify-content: center;
     align-items: center;
   
-    background-color: grey;
+    background: linear-gradient(to left, #393a3d, #2f2b2c, #5f5d5c );
   }
   
-  #grid > div.selected {
-    background-color: aqua;
-    color: navy;
-  }
-  
-  #grid > div:hover {
+#grid > div:hover {
     cursor: pointer;
     box-shadow: 0 0 10px black;
   }
   
-  .selected {
-    background-color: lightcoral;
-    color: white;
+.selected {
+  background: linear-gradient(to left, #4858d6, #2dce83);
+  color:  #ce6722;
+  font-size: 30px;
+  border: 5px solid #cc942b ;
   }

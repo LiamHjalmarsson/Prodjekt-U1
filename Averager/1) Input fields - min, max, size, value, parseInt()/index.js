@@ -67,7 +67,6 @@ button_test_1.addEventListener("click", function(){
     let Value = document.getElementById("input_test_1").value;
     
     console.log(Value);
-    return Value;
 })
 
 
@@ -92,8 +91,8 @@ button_test_1.addEventListener("click", function(){
 
 
 function f1 (){
-    let count = Number.parseInt("23"); 
-    let Value = Number.parseInt(document.getElementById("input_test_1").value);
+    let count = parseInt("23"); 
+    let Value = parseInt(document.getElementById("input_test_1").value);
 
     console.log(count + Value);
 }

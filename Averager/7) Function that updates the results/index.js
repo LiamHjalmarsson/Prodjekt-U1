@@ -1,5 +1,31 @@
 "use strict";
 
+function gridMaker(gridContainer,R, C) {
+
+  gridContainer.style.gridTemplateColumns = `repeat(${C}, 1fr)`;
+  gridContainer.style.gridTemplateRows = `repeat(${R}, 1fr)`;
+
+  gridContainer.innerHTML = "";
+
+  for (let r = 0; r < R; r++) {
+
+    for (let c = 0; c < C; c++) {
+          gridContainer.appendChild( createNumberDiv() );
+  }
+  }  
+}
+
+
+document.querySelector("button").addEventListener("click", function () {
+
+  let rows = parseInt(document.getElementById("inputRows").value);
+  let cols = parseInt(document.getElementById("inputCols").value);
+
+  gridMaker( document.querySelector("#grid"), rows, cols);
+
+  
+})
+
 
 /*
 
@@ -67,6 +93,7 @@ function getArrayOfSelectedNumbers (className) {
 }
 
 
+
 /*
 
 For this part, we need an array with all the selected numbers.
@@ -117,8 +144,6 @@ VIDEO:  Record a video where you explain what happens on these lines:
 
 
 
-
-
 AMOUNT
 This simply states the number of currently selected numbers.
 Since we have them in an array, it's easy to get their amount... do you
@@ -151,3 +176,48 @@ function roundString(numberWithManyDecimals, decimals){
   return (Math.round(numberWithManyDecimals * rounded) / rounded).toFixed(decimals);
 }
 
+
+function createNumberDiv() {
+  let div = document.createElement("div");
+  div.innerHTML = Math.floor(Math.random () * 100);
+
+  div.addEventListener("click", function(){
+    
+      div.classList.toggle("selected");
+      updateResults("selected");
+  })
+
+  return div;
+}
+
+
+function adder (Arr){
+  let Sum = 0; 
+  for (let i = 0; i < Arr.length; i++){
+   Sum = Sum + Arr[i];
+  }
+  return Sum;
+}
+
+
+function averg(_array) {
+  let average = adder(_array) / _array.length;
+  average = roundString(average, 1);
+  return average;
+}
+
+
+
+function updateResults (className){
+
+  let arrayNumbers = getArrayOfSelectedNumbers(className);
+
+  document.querySelector("#results > div:nth-child(1) > span").innerHTML = " " + arrayNumbers.join();
+  document.querySelector("#results > div:nth-child(2) > span").innerHTML = " " + arrayNumbers.length;
+  document.querySelector("#results > div:nth-child(3) > span").innerHTML = " " + adder(arrayNumbers);
+  document.querySelector("#results > div:nth-child(4) > span").innerHTML = " " + averg(arrayNumbers);
+}
+
+
+console.log( [1,3,4,10,0,1].join() );
+console.log( [1,3,4,10,0,1].join(" - ") );

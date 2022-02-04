@@ -36,12 +36,20 @@ function F25 (container){
   for ( let i = 0; i < 25; i++ ) {
     let gridContainer = document.querySelector(container); 
     let div = document.createElement("div");
-    div.innerHTML = Math.floor(Math.random() * 13);
+    div.innerHTML = Math.floor(Math.random() * 100);
+    // div.innerHTML = randomNumber(100);
 
     gridContainer.appendChild(div);
   }
 }
 
+
+// function randomNumber (max) {
+//   return Math.floor(max * Math.random());
+// }
+
+
 F25("#gridContainer")
+
 
 console.log(F25);

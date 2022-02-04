@@ -65,4 +65,7 @@ function adder (_Arr){
 }
 
 console.log(adder([5, 2, 1, 7]));
+console.log(adder([1]));
+console.log(adder([0]));
+
 

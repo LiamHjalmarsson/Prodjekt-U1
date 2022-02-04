@@ -14,43 +14,48 @@ VIDEO:  Record a video where you explain the two different ways (see above) of c
         amount of numberDivs. The video should be called loopExplainer
 
 */
+      
+function createNumberDiv() {
+        let div = document.createElement("div");
+        div.innerHTML = Math.floor(Math.random () * 100);
+
+        return div;
+    }
+    
 
 function gridMaker(gridContainer,R, C) {
 
         gridContainer.style.gridTemplateColumns = `repeat(${C}, 1fr)`;
         gridContainer.style.gridTemplateRows = `repeat(${R}, 1fr)`;
 
-        for (let i = 0; i < R; i++) {
-          let row = document.createElement("div");
-          gridContainer.appendChild(row);   
+        gridContainer.innerHTML = "";
 
-          for (let i = 0; i < C; i++) {
-                let colum = document.createElement("div");
-                gridContainer.appendChild(colum);
+        for (let r = 0; r < R; r++) {
+
+          for (let c = 0; c < C; c++) {
+                gridContainer.appendChild( createNumberDiv() );
         }
-        
-        }
-        
-      
+        }  
     }
     
+
 // function gridMaker(gridContainer,R, C) {
 //         gridContainer.style.gridTemplateColumns = `repeat(${C}, 1fr)`;
 //         gridContainer.style.gridTemplateRows = `repeat(${R}, 1fr)`;
 
 //         for ( let i = 0; i < R * C; i++ ){
-//                 let ColumRow = document.createElement("div");
-//                 gridContainer.appendChild(ColumRow);
+//                 gridContainer.appendChild( createNumberDiv() );
 //         }
 // }
 
 
 document.querySelector("button").addEventListener("click", function () {
 
-        let rows = Number.parseInt(document.getElementById("inputRows").value);
-        let cols = Number.parseInt(document.getElementById("inputCols").value);
+        let rows = parseInt(document.getElementById("inputRows").value);
+        let cols = parseInt(document.getElementById("inputCols").value);
     
         gridMaker( document.querySelector("#grid"), rows, cols);
     })
     
     
+
