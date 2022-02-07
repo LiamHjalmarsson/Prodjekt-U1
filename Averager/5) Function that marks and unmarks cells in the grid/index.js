@@ -65,4 +65,4 @@ function createNumberDiv() {
 
 console.log(createNumberDiv);
 
-document.querySelector("body").appendChild(createNumberDiv() );
+document.querySelector("#selected").appendChild(createNumberDiv() );

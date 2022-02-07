@@ -42,17 +42,17 @@ function averg(_array) {
 
 function createNumberDiv() {
 
-  let div = document.createElement("div");
-  div.innerHTML = Math.floor(Math.random () * 100);
+  let divNumber = document.createElement("div");
+  divNumber.innerHTML = Math.floor(Math.random () * 100);
 
-  div.addEventListener("click", function(){
+  divNumber.addEventListener("click", function(){
     
-      div.classList.toggle("selected");
+    divNumber.classList.toggle("selected");
       updateResults("selected");
       
   });
 
-  return div;
+  return divNumber;
 
 }
 
