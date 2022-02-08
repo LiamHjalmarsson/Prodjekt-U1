@@ -23,20 +23,20 @@ function createNumberDiv() {
     }
     
 
-// function gridMaker(gridContainer,R, C) {
+function gridMaker(gridContainer,R, C) {
 
-//         gridContainer.style.gridTemplateColumns = `repeat(${C}, 1fr)`;
-//         gridContainer.style.gridTemplateRows = `repeat(${R}, 1fr)`;
+        gridContainer.style.gridTemplateColumns = `repeat(${C}, 1fr)`;
+        gridContainer.style.gridTemplateRows = `repeat(${R}, 1fr)`;
 
-//         gridContainer.innerHTML = "";
+        gridContainer.innerHTML = "";
 
-//         for (let r = 0; r < R; r++) {
+        for (let r = 0; r < R; r++) {
 
-//           for (let c = 0; c < C; c++) {
-//                 gridContainer.appendChild( createNumberDiv() );
-//         }
-//         }  
-//     }
+          for (let c = 0; c < C; c++) {
+                gridContainer.appendChild( createNumberDiv() );
+        }
+        }  
+    }
     
 
     function gridMaker(gridContainer,R, C) {
